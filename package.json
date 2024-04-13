@@ -1,0 +1,6 @@
+{
+  "main": "index.js",
+  "dependencies": {
+    "get-video-duration": "^4.1.0"
+  }
+}
