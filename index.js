@@ -30,7 +30,12 @@ async function getPlaylistDuration(){
 		let timeInSeconds = await getVideoDurationInSeconds(vidFiles[i]);
 		length = length + timeInSeconds;
 	}
-	console.log(length / 60);
+	let timeUnit = process.argv[3];
+	if(timeUnit === '-m')
+	console.log("minues:",length / 60);
+	else if(timeUnit === '-h')
+	 console.log("hours:",length / 3600);
+	else console.log("seconds:",length)
 }
 
 getPlaylistDuration()
